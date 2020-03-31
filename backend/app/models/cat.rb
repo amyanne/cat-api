@@ -1,3 +1,3 @@
 class Cat < ApplicationRecord
-    has_many :actions
+    has_many :personality_traits
 end

@@ -3,8 +3,10 @@ class CreateCats < ActiveRecord::Migration[6.0]
     create_table :cats do |t|
       t.string :name
       t.string :gender
-      t.string :color
-      t.string :size
+      t.string :age
+      t.string :description
+      t.string :status
+      t.string :picture
 
       t.timestamps
     end
