@@ -6,4 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-cats = Cat.create([{name: "Ellie", gender: "girl", color: "white", size: "small"}])
+cats = Cat.create([{name: "Ellie", gender: "girl"}, {name: "Martin", gender: "male", age: "6 moths"}])
+traits = PersonalityTrait.create([{name: "social"}, {name: "grumpy"}, {name: "playful"}])
