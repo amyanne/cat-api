@@ -1,4 +1,4 @@
-class cat {
+class Cat {
     static all = []
 
     constructor(name, age, description, status, picture) {
@@ -17,8 +17,8 @@ class cat {
     }
 
     display() {
-        
-        document.getElementsByClassName("new-new")[0].innerHTML += this.template();
+        console.log(document.getElementsByClassName("meow"))
+        document.getElementsByClassName("meow")[0].innerHTML += this.template();
     }
 
     static renderAll() {

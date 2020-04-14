@@ -2,7 +2,7 @@ class Api {
     static baseUrl = "http://localhost:3000"
     
     static getCats() {
-        fetch(Api.baseUrl + '/api/cats')
+        fetch(Api.baseUrl + '/cats')
             .then(response => response.json())
             .then(cats => {
                 cats.forEach(cat => {
@@ -15,10 +15,12 @@ class Api {
             
     }
 
+
+
     static submitCat(event) {
         event.preventDefault(); 
         let data = createData();
-        fetch(Api.baseUrl + '/api/cats', {
+        fetch(Api.baseUrl + '/cats', {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

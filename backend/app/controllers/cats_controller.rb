@@ -1,4 +1,5 @@
 class CatsController < ApplicationController
+    before_action :set_cat
 
     def index
         @cats = Cat.all
@@ -6,6 +7,26 @@ class CatsController < ApplicationController
     end 
 
     def show
-        render json: @cats
+        render json: @cat
+    end 
+
+    def create
+        @cat = Cat.new(cat_params)
+        
+        if @cat.save 
+           render json: @cat
+        else 
+           render json: {message: "Cat profile could not be added"}, status: 400
+        end
+     end
+
+     private 
+
+     def set_cat
+        cat = Cat.find_by_id(params[:id])
+    end 
+
+     def cat_params
+        params.require(:cat).permit(:name, :age, :description, :status, :picture)
     end 
 end
