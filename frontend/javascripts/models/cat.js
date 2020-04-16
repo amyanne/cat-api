@@ -17,7 +17,6 @@ class Cat {
     }
 
     display() {
-        console.log(document.getElementsByClassName("meow"))
         document.getElementsByClassName("meow")[0].innerHTML += this.template();
     }
 

@@ -19,8 +19,7 @@ class Api {
 
     static submitCat(event) {
         event.preventDefault(); 
-        console.log("THIS IS THE EVENT", event);
-        // let data = createData();
+        let data = createData();
         fetch(Api.baseUrl + '/cats', {
             method: "POST",
             headers: {
@@ -31,8 +30,8 @@ class Api {
         })
             .then(response => response.json())
             .then(data => {
-                let cat= new Cat(cat.name, cat.age, cat.description, cat.status, cat.picture);;
-                cat.display();
+                let newCat = new Cat(data.name, data.age, data.description, data.status, data.picture);
+                newCat.display();
             })
     }
 

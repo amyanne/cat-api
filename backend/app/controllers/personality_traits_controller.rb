@@ -5,6 +5,6 @@ class PersonalityTraitsController < ApplicationController
     end 
 
     def show
-        render json: @traits
-    end 
+        render json:
+    end  
 end
