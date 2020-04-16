@@ -19,7 +19,8 @@ class Api {
 
     static submitCat(event) {
         event.preventDefault(); 
-        let data = createData();
+        console.log("THIS IS THE EVENT", event);
+        // let data = createData();
         fetch(Api.baseUrl + '/cats', {
             method: "POST",
             headers: {

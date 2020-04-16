@@ -8,7 +8,6 @@ class Cat {
         this.status = status;
         this.picture = picture;
         Cat.all.push(this)
-        console.log(this)
     }
 
     template() {
