@@ -1,0 +1,2 @@
+class CatPersonalityTraitsController < ApplicationController
+end

@@ -15,7 +15,6 @@ class CatsController < ApplicationController
         
         if @cat.save 
            render json: @cat
-           puts "i am getting hit"
         else 
            render json: {message: "Cat profile could not be added"}, status: 400
         end
