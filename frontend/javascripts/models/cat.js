@@ -1,5 +1,5 @@
 class Cat {
-    static all = []
+    static all = []  
 
     constructor(name, age, description, status, picture) {
         this.name = name;
@@ -12,16 +12,19 @@ class Cat {
 
     template() {
         return `
-         <li> ${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture} </li>
-        <br><br>  `
+         <div class="card"><h2>${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture}</h2></div>
+         `
+
     }
 
     display() {
+
         document.getElementsByClassName("meow")[0].innerHTML += this.template();
     }
 
     static renderAll() {
-        
+
+
         Cat.all.forEach(cat => cat.display())
     }
 }

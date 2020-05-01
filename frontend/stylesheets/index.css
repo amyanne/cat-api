@@ -1,4 +1,4 @@
-@import "http://fonts.googleapis.com/css?family=Ubuntu";
+/* @import "http://fonts.googleapis.com/css?family=Ubuntu";
 div#main{
 width:830px;
 height:650px;
@@ -52,10 +52,22 @@ font-size:18px;
 font-weight:700;
 cursor:pointer;
 font-family:'Ubuntu',sans-serif
+} */
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
+
+.card {
+  display: inline-block;
+}
+
+
 /* -------------------------------------
 CSS for Sidebar (optional)
----------------------------------------- */
+---------------------------------------- */ */
 div#fugo{
 float:right
 }
