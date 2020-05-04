@@ -17,7 +17,7 @@ function createData() {
             gender: document.getElementById("gender").value,
             age: document.getElementById("age").value,
             description: document.getElementById("description").value,
-            cat_traits: [{name_of_trait_from_frontend: "Social"}]
+            cat_personality_traits_attributes: [{name_of_trait_from_frontend: "Social"}]
 
             // personality_traits = []
             // if checkbox['Social'] = true {
