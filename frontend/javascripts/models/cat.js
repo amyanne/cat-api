@@ -1,18 +1,19 @@
 class Cat {
     static all = []  
 
-    constructor(name, age, description, status, picture) {
+    constructor(name, age, description, status, picture, traits) {
         this.name = name;
         this.age = age;
         this.description = description;
         this.status = status;
         this.picture = picture;
+        this.traits = traits;
         Cat.all.push(this)
     }
 
     template() {
         return `
-         <div class="card"><h2>${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture}</h2></div>
+         <div class="card"><h2>${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture}, </h2></div>
          `
 
     }
