@@ -13,7 +13,7 @@ class Cat {
 
     template() {
         return `
-         <div class="card"><h2>${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture}, </h2></div>
+         <div class="card"><h2>${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.picture}, ${this.traits} </h2></div>
          `
 
     }

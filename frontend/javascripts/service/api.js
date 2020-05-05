@@ -19,7 +19,7 @@ class Api {
 
     static submitCat(event) {
         event.preventDefault(); 
-        let data = createData();
+        let data = getCatFromForm();
         fetch(Api.baseUrl + '/cats', {
             method: "POST",
             headers: {
