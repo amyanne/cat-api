@@ -1,8 +1,5 @@
 const BASE_URL = "http://localhost:3000"
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
     Api.getCats();
@@ -19,6 +16,7 @@ function createTraits() {
       }
     if (document.getElementById("Playful").checked == true) {
         catTraits.push({name_of_trait_from_frontend: "Playful"})
+
     }
     if (document.getElementById("Cuddly").checked == true) {
         catTraits.push({name_of_trait_from_frontend: "Cuddly"})
@@ -49,6 +47,8 @@ function createTraits() {
 function getCatFromForm() {
     
     const traits = createTraits()
+
+    console.log(traits)
     
     return {
         cat: {
@@ -56,8 +56,8 @@ function getCatFromForm() {
             gender: document.getElementById("gender").value,
             age: document.getElementById("age").value,
             description: document.getElementById("description").value,
+            status: document.getElementById("status").value,
             cat_personality_traits_attributes: traits
-            
         }
     }
 }

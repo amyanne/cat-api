@@ -4,7 +4,7 @@ class CatsController < ApplicationController
 
     def index
         @cats = Cat.all
-        render json: @cats
+        render json: @cats, include: [:personality_traits]
     end 
 
     def show
@@ -19,10 +19,11 @@ class CatsController < ApplicationController
         end
 
         if @cat.save 
-           render json: @cat
+           render json: @cat, include: [:personality_traits]
         else 
            render json: {message: "Cat profile could not be added"}, status: 400
         end
+        
         puts "!!!!@@@@@ #{@cat.cat_personality_traits.inspect}"
      end
 

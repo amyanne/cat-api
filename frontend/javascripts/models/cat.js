@@ -1,13 +1,19 @@
 class Cat {
     static all = []  
 
-    constructor(name, age, description, status, picture, traits) {
+    constructor(name, age, description, status, picture, personality_traits) {
         this.name = name;
         this.age = age;
         this.description = description;
         this.status = status;
         this.picture = picture;
-        this.traits = traits;
+        let i = 0;
+        let traits_array = []
+        for (i; i < personality_traits.length; i++) {
+            let name = personality_traits[i].name
+            traits_array.push(name)
+            }
+        this.traits = traits_array;
         Cat.all.push(this)
     }
 
