@@ -57,6 +57,7 @@ function getCatFromForm() {
             age: document.getElementById("age").value,
             description: document.getElementById("description").value,
             status: document.getElementById("status").value,
+            picture: document.getElementById("picture").value,
             cat_personality_traits_attributes: traits
         }
     }
