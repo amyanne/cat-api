@@ -38,7 +38,6 @@ function createTraits() {
     }
     
        
-      console.log(catTraits)
 
     return catTraits
 }
@@ -48,7 +47,6 @@ function getCatFromForm() {
     
     const traits = createTraits()
 
-    console.log(traits)
     
     return {
         cat: {
@@ -64,7 +62,6 @@ function getCatFromForm() {
 }
 
 function resetForm() {
-    console.log("I am gettin ghit")
     document.getElementById("name").value = ""
     document.getElementById("gender").value = ""
     document.getElementById("age").value = ""

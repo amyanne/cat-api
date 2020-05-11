@@ -39,9 +39,7 @@ class Api {
             // console.log(JSON.stringify(data)) 
         // })
             .then(data => {
-                console.log(data)
-                console.log("here is cat resp")
-                console.log(data.personality_traits)
+                
                 let newCat = new Cat(data.name, data.age, data.description, data.status, data.picture, data.personality_traits);
     
             

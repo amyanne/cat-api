@@ -19,7 +19,7 @@ class Cat {
 
     template() {
         return `
-    <div class="card"><h2><img src=${this.picture}></img>, ${this.name}, ${this.age}, ${this.description}, ${this.status}, ${this.traits} </h2></div>
+    <div class="card"><h2><img src=${this.picture} ></img><br> Name: ${this.name} <br> Age: ${this.age}<br> About:${this.description}<br> Availablilty: ${this.status}<br> Traits: ${this.traits} </h2></div>
          `
 
     }
