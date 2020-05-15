@@ -5,6 +5,7 @@ class Api {
         fetch(Api.baseUrl + '/cats')
             .then(response => response.json())
             .then(cats => {
+                let catArray = []
                 cats.forEach(cat => {
                     
                     let newCat= new Cat(cat.name, cat.age, cat.description, cat.status, cat.picture, cat.personality_traits);
@@ -19,7 +20,7 @@ class Api {
 
     static submitCat(event) {
         event.preventDefault(); 
-        let catData = getCatFromForm();
+        const catData = getCatFromForm();
         fetch(Api.baseUrl + '/cats', {
             method: "POST",
             headers: {
@@ -41,6 +42,7 @@ class Api {
             .then(data => {
                 
                 let newCat = new Cat(data.name, data.age, data.description, data.status, data.picture, data.personality_traits);
+
     
             
                 newCat.display();

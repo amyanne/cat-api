@@ -1,5 +1,5 @@
 class Cat {
-    static all = []  
+    static all = []
 
     constructor(name, age, description, status, picture, personality_traits) {
         this.name = name;
@@ -7,12 +7,9 @@ class Cat {
         this.description = description;
         this.status = status;
         this.picture = picture;
-        let i = 0;
-        let traits_array = []
-        for (i; i < personality_traits.length; i++) {
-            let name = personality_traits[i].name
-            traits_array.push(name)
-            }
+        let traits_array = personality_traits.map(function(trait) {
+            return trait.name
+        })
         this.traits = traits_array;
         Cat.all.push(this)
     }
@@ -29,9 +26,25 @@ class Cat {
         document.getElementsByClassName("meow")[0].innerHTML += this.template();
     }
 
+    sortCat() {
+
+        let sortArray = all.sort 
+
+        return sortArray
+
+
+    }
+
+    
+
     static renderAll() {
+        
+         let cats = Cat.all.sort(function (a, b) {
+            let catAName = a.name.toUpperCase()
+            let catBName = b.name.toUpperCase()
+            return (catAName < catBName) ? -1 : (catAName > catBName) ? 1 : 0
+        })
+         cats.forEach(cat => cat.display())
 
-
-        Cat.all.forEach(cat => cat.display())
     }
 }
