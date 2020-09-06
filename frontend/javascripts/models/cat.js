@@ -7,16 +7,18 @@ class Cat {
         this.description = description;
         this.status = status;
         this.picture = picture;
-        let traits_array = personality_traits.map(function(trait) {
+        let traitsArray = personality_traits.map(function(trait) {
             return trait.name
         })
-        this.traits = traits_array;
+        this.traits = traitsArray;
         Cat.all.push(this)
     }
 
     template() {
+        let traitString = this.traits.join(", ")
+
         return `
-    <div class="card"><h2><img src=${this.picture} ></img><br> Name: ${this.name} <br> Age: ${this.age}<br> About:${this.description}<br> Availablilty: ${this.status}<br> Traits: ${this.traits} </h2></div>
+    <div.a class="card"><h6><br><br><img src=${this.picture} ></img><br> Name: ${this.name} <br> Age: ${this.age}<br> About: ${this.description}<br> Availablilty: ${this.status}<br> Traits: ${traitString} <br><br> </h6></div.a>
          `
 
     }

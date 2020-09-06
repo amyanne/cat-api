@@ -15,7 +15,7 @@ function createTraits() {
         catTraits.push({name_of_trait_from_frontend: "Social"})
       }
     if (document.getElementById("Playful").checked == true) {
-        catTraits.push({name_of_trait_from_frontend: "Playful"})
+        catTraits.push({name_of_trait_from_frontend: "Playful" })
 
     }
     if (document.getElementById("Cuddly").checked == true) {
@@ -37,9 +37,7 @@ function createTraits() {
         catTraits.push({name_of_trait_from_frontend: "Adventurous"})
     }
     
-       
-
-    return catTraits
+       return catTraits
 }
 
 

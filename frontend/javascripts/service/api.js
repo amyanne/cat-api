@@ -31,20 +31,9 @@ class Api {
         })
         .then(response => response.json())
             
-            // console.log("here is the cat response")
-            // console.log(response)
-            // console.log("here is the cat response2")
-            // console.log(response)
-
-            // console.log("here is the cat input" )
-            // console.log(JSON.stringify(data)) 
-        // })
             .then(data => {
                 
                 let newCat = new Cat(data.name, data.age, data.description, data.status, data.picture, data.personality_traits);
-
-    
-            
                 newCat.display();
             })
     }
