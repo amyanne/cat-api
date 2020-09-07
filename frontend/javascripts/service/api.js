@@ -1,6 +1,8 @@
 class Api {
     static baseUrl = "http://localhost:3000"
     
+    
+    
     static getCats() {
         fetch(Api.baseUrl + '/cats')
             .then(response => response.json())
@@ -16,6 +18,15 @@ class Api {
             
     }
 
+    static deleteCat(id){
+        debugger;
+
+        fetch(Api.baseUrl + '/cats/' + id, {
+            method: 'delete'
+          })
+          .then(response => response.json());
+        }
+    
 
 
     static submitCat(event) {

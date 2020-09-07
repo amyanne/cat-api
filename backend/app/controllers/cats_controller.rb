@@ -27,6 +27,10 @@ class CatsController < ApplicationController
         puts "!!!!@@@@@ #{@cat.cat_personality_traits.inspect}"
      end
 
+     def delete
+        @cat.destroy
+    end
+
      private 
 
      def set_cat

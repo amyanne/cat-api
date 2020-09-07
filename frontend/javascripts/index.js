@@ -4,8 +4,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Api.getCats();
     addSubmitEventToForm();
+    addDeleteEventToCat();
     resetForm();
 })
+
 
 function createTraits() {
 
@@ -59,12 +61,26 @@ function getCatFromForm() {
     }
 }
 
+function hideForm() {
+    let x = document.getElementById("cat-form");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
 function resetForm() {
     document.getElementById("name").value = ""
     document.getElementById("gender").value = ""
     document.getElementById("age").value = ""
     document.getElementById("description").value = ""
 }
+
+function addDeleteEventToCat(){
+     document.getElementsByClassName("meow")[0].addEventListener('delete', Api.deleteCat)
+}
+    
             
 function addSubmitEventToForm() {
     document.getElementById("cat-form").addEventListener('submit', Api.submitCat)

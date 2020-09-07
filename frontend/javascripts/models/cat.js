@@ -18,8 +18,7 @@ class Cat {
         let traitString = this.traits.join(", ")
 
         return `
-    <div.a class="card"><h6><br><br><img src=${this.picture} ></img><br> Name: ${this.name} <br> Age: ${this.age}<br> About: ${this.description}<br> Availablilty: ${this.status}<br> Traits: ${traitString} <br><br> </h6></div.a>
-         `
+         <div.a class="card"><h6><br><br><img src=${this.picture} ></img><br> Name: ${this.name} <br> Age: ${this.age}<br> About: ${this.description}<br> Availablilty: ${this.status}<br> Traits: ${traitString} <br><br> </h6>  </div.a>`
 
     }
 
