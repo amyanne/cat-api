@@ -78,7 +78,8 @@ function resetForm() {
 }
 
 function addDeleteEventToCat(){
-     document.getElementsByClassName("meow")[0].addEventListener('delete', Api.deleteCat)
+     button.addEventListener('delete', Api.deleteCat)
+     
 }
     
             

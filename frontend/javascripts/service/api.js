@@ -18,15 +18,32 @@ class Api {
             
     }
 
-    static deleteCat(id){
-        debugger;
+    // const releasePokemon = (event) => {
+    //     event.preventDefault()
+    //     const configObj = {
+    //       method: "DELETE",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         "Accept": "application/json"
+    //       }
+    //     }
+    //     fetch(`${POKEMONS_URL}/${event.target.dataset.pokemonId}`, configObj)
+    //     event.target.parentElement.remove()
+    //   }
 
-        fetch(Api.baseUrl + '/cats/' + id, {
-            method: 'delete'
-          })
-          .then(response => response.json());
+    static deleteCat = (event) => {
+        event.preventDefault()
+        const configObj = {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
+
         }
-    
+            fetch(API.baseUrl + "/${event.target.dataset.catId}", configObj)
+        event.target.parentElement.remove()
+      }
 
 
     static submitCat(event) {
