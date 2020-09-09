@@ -5,19 +5,18 @@
 <h4> Cat Rescue App is an API that allows for a cat rescue to upload pictures and descriptions of cats available for adoption </h4>
 <h2> Features </h2> 
 <ul>
-  <li>Upload pictures</li>
-  <li></li>
-  <li></li>
+  <li>Upload pictures and descriptions of cats</li>
+  <li>Filter cats in alphabetical order</li>
 </ul>
 <h2> Tech Stack </h2>
+<h3> Backend </h3
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Ruby [2.6.1]</li>
+  <li>Rack-Cors</li>
 </ul>
-<h2> Installing </h2>
+<h3> Frontend </h3>
 <ul>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>Vanilla JavaScript [ES6]</li>
+  <li>Custom CSS3 styling</li>
 </ul>
+
